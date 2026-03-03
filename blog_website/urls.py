@@ -19,6 +19,7 @@ from django.urls import path, include
 
 #make sure you include the urls from the each application, 
 #so that the view you created in blog/views.py, for instance, is available at a URL.
+#be careful as there is also a urls.py in the blog application
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
