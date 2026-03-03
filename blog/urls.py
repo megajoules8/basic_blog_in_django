@@ -6,4 +6,6 @@ from . import views #this grabs the views from the blog application
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
+    #this is the URL pattern for the post_detail view, which we will create in views.py
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]

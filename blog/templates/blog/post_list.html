@@ -1,8 +1,10 @@
 {% extends 'blog/base.html' %}
+
 {% block content %}
     {% for post in posts %}
-        <article class="post">                        
-            <h2><a href="">{{ post.title }}</a></h2>
+        <article class="post">      
+            <!--make a URL, uses pk (primary key) of post, add to urls.py-->                  
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <time class="date">
                 {{ post.published_date }}
             </time>
